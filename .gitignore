@@ -1,0 +1,35 @@
+# Environment
+.env
+venv/
+env/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Vector store (regenerated at runtime)
+vector_store/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Stitch demo (design reference, not part of the app)
+stitch (1)/
+
+# Misc
+*.log
+.gemini/

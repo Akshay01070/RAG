@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Indecimal RAG Assistant — AI-powered chatbot for construction marketplace queries, grounded in internal documents." />
+    <title>Indecimal RAG Assistant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+    <!-- Background Decoration -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+
+    <!-- Top App Bar -->
+    <header id="topbar">
+        <div class="topbar-left">
+            <span class="topbar-title">Indecimal RAG Assistant</span>
+        </div>
+        <div class="topbar-right">
+            <button class="icon-btn" title="System Status">
+                <span class="material-symbols-outlined">signal_cellular_alt</span>
+            </button>
+            <button class="icon-btn" title="Settings">
+                <span class="material-symbols-outlined">settings</span>
+            </button>
+            <div class="avatar">A</div>
+        </div>
+    </header>
+
+    <div id="app-shell">
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-name">Cognitive Monolith</div>
+                <div class="brand-version">v2.0.4-alpha</div>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" id="new-chat-btn">
+                    <span class="material-symbols-outlined">add_comment</span>
+                    <span>New Chat</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <span class="material-symbols-outlined">history</span>
+                    <span>History</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="system-load">
+                    <div class="system-load-header">
+                        <span class="status-dot"></span>
+                        <span class="system-load-label">System Load</span>
+                    </div>
+                    <div class="load-bar">
+                        <div class="load-bar-fill" id="load-bar-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main id="main-content">
+            <!-- Welcome / Hero Area -->
+            <div id="welcome-area">
+                <div class="welcome-center">
+                    <div class="rag-badge">
+                        <span class="material-symbols-outlined">auto_awesome</span>
+                        <span>Enhanced RAG Engine</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Ask me anything about <span class="gradient-text">Indecimal</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Access deep institutional knowledge, technical documentation, and real-time data retrievals through our neural bridge.
+                    </p>
+                </div>
+
+                <!-- Bento Suggestion Grid -->
+                <div class="bento-grid">
+                    <button class="bento-card" data-query="What are the package prices per sqft?">
+                        <span class="material-symbols-outlined bento-icon icon-primary">description</span>
+                        <h3 class="bento-title">Package Pricing</h3>
+                        <p class="bento-desc">What are the per-sqft rates for each construction package?</p>
+                    </button>
+                    <button class="bento-card" data-query="How does the escrow payment model work?">
+                        <span class="material-symbols-outlined bento-icon icon-tertiary">database</span>
+                        <h3 class="bento-title">Payment Safety</h3>
+                        <p class="bento-desc">How does the escrow-based payment model protect customers?</p>
+                    </button>
+                    <button class="bento-card" data-query="What is included in the zero cost maintenance program?">
+                        <span class="material-symbols-outlined bento-icon icon-primary">build</span>
+                        <h3 class="bento-title">Maintenance Program</h3>
+                        <p class="bento-desc">What does the zero cost maintenance program cover?</p>
+                    </button>
+                    <button class="bento-card" data-query="What factors affect construction project delays?">
+                        <span class="material-symbols-outlined bento-icon icon-tertiary">schedule</span>
+                        <h3 class="bento-title">Delay Management</h3>
+                        <p class="bento-desc">How does Indecimal handle and prevent construction delays?</p>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Messages Area -->
+            <div id="messages-area">
+                <div id="messages"></div>
+            </div>
+
+            <!-- Sticky Input Bar -->
+            <div id="input-dock">
+                <div class="input-dock-inner">
+                    <div class="input-glow"></div>
+                    <form id="query-form" class="input-bar" autocomplete="off">
+                        <span class="material-symbols-outlined input-search-icon">search</span>
+                        <input type="text" id="query-input" placeholder="Query the Cognitive Monolith..." required />
+                        <div class="input-actions">
+                            <button type="submit" id="send-btn" class="send-btn" title="Send">
+                                <span class="material-symbols-outlined">arrow_upward</span>
+                            </button>
+                        </div>
+                    </form>
+                    <div class="input-status-bar">
+                        <div class="status-indicator">
+                            <span class="status-dot pulse"></span>
+                            <span>Retrieval active</span>
+                        </div>
+                        <div class="status-indicator">
+                            <span class="material-symbols-outlined" style="font-size:14px;">verified_user</span>
+                            <span>Encrypted session</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
